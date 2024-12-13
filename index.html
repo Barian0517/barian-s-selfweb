@@ -205,13 +205,13 @@
             未來日記<br>
             終結的熾天使<br>
             DARLING in the FRANXX
-            </p>        
+        </p>        
         
 
 
     </div>
 
-    /*音樂*/
+    <!-- 音樂 -->
     <div class="block">
         <audio id="musicauto" autoplay muted loop>
             <source src="music.mp3" type="audio/mpeg">
@@ -223,13 +223,15 @@
         </a>
         
     </div>
-    /*音樂強制撥放*/
+    <!-- 強制撥放 -->
     <script>
         document.body.addEventListener('click', function() {
             const audio = document.getElementById('musicauto');
             audio.muted = false; // 用户点击后解除静音
             audio.play(); // 确保播放
         });
+
+
     </script>    
 </body>
 </html>
