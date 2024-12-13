@@ -121,18 +121,20 @@ li.link{
 }
 
 /*滑鼠放大*/
-.link a:hover img {
+.link a:hover i {
     transform: scale(1.1); /* 放大圖標 */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 增強陰影 */
 }
 
 /* 圖片樣式 */
-.link img {
-    width: 50px; /* 圖標寬度 */
-    height: 50px; /* 圖標高度 */
+.link i {
+    border: 3px aqua solid;
+    padding: 5px;
     border-radius: 50%; /* 圓形圖標 */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動畫效果 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+    font-size: 1.7em;
+    color:aqua;
 }
 
 
