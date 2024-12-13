@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幽影桜 Barian</title>
+    <style>
+        body {
+            
+            background-image: url('496d20c0-8e20-433b-b8c5-2696e4f128ed.png'); /*背景圖片*/
+            /* overflow: auto  啟用滾動 */
+            background-size: cover; /*背景圖片大小*/
+            background-position: center;  /*中心*/          
+            background-repeat: no-repeat;  /*不要重複*/
+            background-attachment: fixed; /* 背景固定不動 */
+        }
+        
+        .block h2{
+            color:rgb(52, 129, 244);
+            font-weight: bold; /* 設定字體為粗體 */
+            font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+        }
+
+
+        .block p{
+
+            color:rgb(44, 182, 200);
+            font-weight: bold; /* 設定字體為粗體 */
+            font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+        }
+
+        .block {
+            
+            margin: auto; /*置中*/
+            
+            opacity: 0.9;  /*透明*/
+            margin-bottom: 20px;
+            width: 40%;  /*大小*/
+            background-color: rgb(253, 254, 255); /*顏色*/
+            padding: 20px;  /*邊框留空*/
+            box-shadow: 0px 0px 20px gray;  /*陰影*/
+            border-radius: 20px;  /*圓滑*/
+        }
+
+        .header{
+            display: flex; /* 啟用彈性盒模型 */
+            justify-content: center; /* 水平置中 */
+            align-items: center; /* 垂直置中 */
+            padding: 20px;  /*邊框留空*/
+            
+            
+
+        }
+
+
+        /*滑鼠放大*/
+        .avatar:hover {
+            transform: scale(1.1); /* 放大圖標 */
+            box-shadow: 5px 5px 20px black; /* 增強陰影 */
+        }
+
+
+
+        
+
+        .avatar{
+            max-height: 200px; /* 最大高度 */
+            max-width: 200px; /* 最大寬度，確保不會超出 */
+            height: auto; /* 等比例縮放高度 */
+            width: auto; /* 等比例縮放寬度 */
+            border-radius: 100%; /* 全圓角 */
+            border: 8px white solid; /* 加邊框 */
+            box-shadow: 5px 5px 20px black; /* 陰影 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動畫效果 */
+            
+            
+        }
+
+
+        .header-txt {
+            margin: auto; /*置中*/
+
+            margin-bottom: 20px;
+            width: 40%;  /*大小*/
+
+
+
+
+        }
+
+
+        .header-txt h2{
+            margin: auto; /*置中*/
+            text-align: center; /* 水平置中 */
+            margin-bottom: 20px;
+            color:rgb(18, 63, 242);
+            font-weight: 700; /* 設定字體為粗體 */
+            font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+        }
+
+        .header-txt p{
+            margin: auto; /*置中*/
+            text-align: center; /* 水平置中 */
+            margin-bottom: 20px;
+            color:rgb(97, 70, 205);
+            font-weight: bold; /* 設定字體為粗體 */
+            font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+        }
+
+
+
+        /*整個連結區塊排版*/
+        li.link{
+            display:inline;
+
+            margin-right:25px;
+        }
+
+        #link-icon {
+            text-align: center; /* 內容水平置中（針對文字或 inline 元素） */
+        }
+
+        /*滑鼠放大*/
+        .link a:hover img {
+            transform: scale(1.1); /* 放大圖標 */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+        }
+
+        /* 圖片樣式 */
+        .link img {
+            width: 50px; /* 圖標寬度 */
+            height: 50px; /* 圖標高度 */
+            border-radius: 50%; /* 圓形圖標 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動畫效果 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+        }
+
+
+        /*圖片區1排版*/
+        li.picture{
+            display:inline;
+
+            margin-right:15px;
+        }
+
+        .picture {
+            text-align: center;
+        }
+
+
+        /* 圖片樣式 */
+        li.picture img {
+            width: 280px; /* 圖標寬度 */
+            height: 200px; /* 圖標高度 */
+            object-fit: cover;
+            border-radius: 10%; /* 圓形圖標 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+        }
+
+
+
+         /*圖片區2排版*/
+        li.picture2{
+            display:inline;
+
+            margin-right:15px;
+        }
+        .picture2 {
+            text-align: center;
+        }
+
+
+
+        /* 圖片樣式 */
+        li.picture2 img {
+            width: 280px; /* 圖標寬度 */
+            height: 200px; /* 圖標高度 */
+            object-fit: cover;
+            border-radius: 10%; /* 圓形圖標 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+        }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- 個資塊 -->
+    <div id="header" class="header">
+        <a href="https://www.facebook.com/barian0517/" target="_blank">
+            <img class="avatar" src="468638294_1106175204444153_5933776286163860991_n.jpg" alt="本地圖片">
+        </a>
+    </div>
+
+
+    <!-- 頭貼下文字 -->
+    <div id="header-txt" class="header-txt">
+        <h2>幽影櫻</h2>
+        <p>
+            "與其追風去,不如等風來"
+        </p>
+    </div>
+
+
+
+    <!-- 連結圖標' -->
+    <div id="link-icon" class="linkall">
+        <ul>
+            <li id="ig-link" class="link"> <!-- IG -->
+                <a href="https://www.instagram.com/barian_yyy/" target="_blank">
+                    <img class="IG-link" src="ig-icon.png" alt="Instagram Link">
+                </a>
+            </li>
+            <li id="FB-link" class="link"> <!-- FB -->
+                <a href="https://www.facebook.com/barian0517/" target="_blank">
+                    <img class="FB-link" src="FB-icon.png" alt="facebook Link">
+                </a>
+            </li>
+            <li id="YT-link" class="link"> <!-- YT -->
+                <a href="https://www.youtube.com/@barian0517" target="_blank">
+                    <img class="FB-link" src="YT-icon.png" alt="youtube Link">
+                </a>
+            </li>
+            <li id="TK-link" class="link"> <!-- TK -->
+                <a href="https://v.douyin.com/iUYSHxcS/" target="_blank">
+                    <img class="FB-link" src="TK-icon.png" alt="tk Link">
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+
+
+
+
+
+
+    <!-- 自介塊 -->
+    <div id="about-me" class="block">
+        <h2>關於我</h2>
+        <p>-姓名-<br>幽影桜</p>
+        <p>-暱稱-<br>小幽、幽幽</p>
+        <p>-年齡-<br>17 高中</p>
+        <p>-座標-<br>台北、新北</p>
+        <p>-雷點-<br>不禮貌 其他都還好</p>
+        <p>-可能會雷到你的點-<br>常態關通知
+            顏文字<br>
+            部分小黃臉<br>
+            貼圖<br>
+            概率放置<br>
+            忘記回<br>
+            已讀忘了<br>
+            還有可能一些說話習慣之類的</p>
+    
+    </div>
+
+
+    <!-- 圖片區1 -->
+    <div id="picture" class="picture">
+        <ul>
+            <li class="picture"> <!-- 圖片1 -->
+                <a>
+
+                    <img src="462583378_490705110797750_5516485117078238691_n.jpg" alt="BH3" />
+                </a>
+            </li>
+            <li class="picture"> <!-- 圖片2 -->
+                <a>
+
+                    <img src="462553117_923762669466852_9153752947683805272_n.jpg" alt="PJSK" />
+                </a>
+            </li>
+
+
+        </ul>
+        
+    </div>
+
+
+
+
+    <div id="活動範圍" class="block">
+        <h2>活動範圍</h2>
+        <p>社交媒體<br>messenger > FB > DC > IG > TG</p>
+        <p>-時段-<br>週一到週五 早上8.~ 凌晨2.<br>假日 早上12.~ 凌晨2.、3.
+        <p>通常我在線都會回 沒回的話可以多傳幾遍 可能是忘了</p>
+        
+    </div>
+
+
+    <!-- 圖片區2 -->
+    <div id="picture2" class="picture2">
+        <ul>
+            <li class="picture2"> <!-- 圖片1 -->
+                <a>
+
+                    <img src="462577774_890696509919706_563271587188210199_n.jpg" alt="YGO" />
+                </a>
+            </li>
+            <li class="picture2"> <!-- 圖片2 -->
+                <a>
+
+                    <img src="462566447_1268581647755628_3097208111781003104_n.jpg" alt="AYAKA" />
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+
+    <div id="遊戲區" class="block">
+        <h2>遊戲坑、推角</h2>
+        <p>-深坑-<br>
+            Apex<br>
+            原神                           推> 少女、神里綾華<br>
+            遊戲王duel link     推> 星杯神子夏娃<br>
+            世界計畫（日）     推> 宵崎奏</p>
+        <p>-淺坑-<br>
+            鳴潮                               推> 椿<br>
+            崩壞3rd                        推> 希兒<br>
+            崩壞:星穹鐵道                  推> 希兒<br>
+            遊戲王master duel</p>
+        <p>-雲玩家-<br>
+            荒野行動<br>
+            Phirgos<br>
+            Cytus ii<br>
+            光遇</p>
+    </div>
+
+
+
+    <div id="動漫區" class="block">        
+        <h2>動漫坑、推角</h2>
+        <p>-深坑-<br>
+            從零開始的異世界生活 123季  推> 愛蜜莉雅<br>
+            刀劍神域 123季                      推> 愛麗絲<br>
+            約會大作戰 12345                  推> 時崎狂三</p>
+        <p>-淺坑-<br>
+            東京復仇者 123季<br>
+            咒術迴戰 12季<br>
+            百武裝戰記<br>
+            鬼滅之刃 1234季<br>
+            地下城尋求邂逅 12345季<br>
+            莉可麗絲<br>
+            間諜家家酒 1季<br>
+            鏈鋸人<br>
+            地獄樂<br>
+            遊戲王系列<br>
+            {Gx上半
+            Zexal
+            ARC-V
+            Vrains}<br>
+            未來日記<br>
+            終結的熾天使<br>
+            DARLING in the FRANXX
+            </p>        
+        
+
+
+    </div>
+    <div class="block">
+        lalalal
+    </div>
+</body>
+</html>
