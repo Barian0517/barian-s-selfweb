@@ -1,0 +1,231 @@
+body {
+            
+    background-image: url('462579371_927313026166839_2595135407964853824_n.png'); /*背景圖片*/
+    /* overflow: auto  啟用滾動 */
+    background-size: cover; /*背景圖片大小*/
+    background-position: center;  /*中心*/          
+    background-repeat: no-repeat;  /*不要重複*/
+    background-attachment: fixed; /* 背景固定不動 */
+}
+
+.block h2{
+    color:rgb(52, 129, 244);
+    font-weight: bold; /* 設定字體為粗體 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+}
+
+
+.block p{
+
+    color:rgb(44, 182, 200);
+    font-weight: bold; /* 設定字體為粗體 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+}
+
+.block {
+    
+    margin: auto; /*置中*/
+    
+    opacity: 0.9;  /*透明*/
+    margin-bottom: 20px;
+    width: 50%;  /*大小*/
+    background-color: rgb(253, 254, 255); /*顏色*/
+    padding: 20px;  /*邊框留空*/
+    box-shadow: 0px 0px 20px gray;  /*陰影*/
+    border-radius: 20px;  /*圓滑*/
+}
+
+@media (max-width: 428px) {
+    .block {
+        width: 85%;  /*大小*/
+    }
+}
+
+.header{
+    text-align: center; /*置中*/
+    display: flex; /* 啟用彈性盒模型 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    padding: 20px;  /*邊框留空*/
+    
+    
+
+}
+
+
+/*滑鼠放大*/
+.avatar:hover {
+    transform: scale(1.1); /* 放大圖標 */
+    box-shadow: 5px 5px 20px black; /* 增強陰影 */
+}
+
+
+
+
+
+.avatar{
+
+    max-height: 30%; /* 最大高度 */
+    max-width: 30%; /* 最大寬度，確保不會超出 */
+    
+    border-radius: 100%; /* 全圓角 */
+    border: 8px white solid; /* 加邊框 */
+    box-shadow: 5px 5px 20px black; /* 陰影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動畫效果 */
+    
+    
+}
+
+
+.header-txt {
+    margin: auto; /*置中*/
+
+    
+    
+
+
+}
+
+
+.header-txt h2{
+    margin: auto; /*置中*/
+    text-align: center; /* 水平置中 */
+    margin-bottom: 20px;
+    color:rgb(18, 63, 242);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fff, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #fff; /* 水平 2px, 垂直 2px, 模糊 5px */
+    font-weight: 700; /* 設定字體為粗體 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+}
+
+.header-txt p{
+    margin: auto; /*置中*/
+    text-align: center; /* 水平置中 */
+    margin-bottom: 20px;
+    color:rgb(97, 70, 205);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fff, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #fff;
+    font-weight: bold; /* 設定字體為粗體 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+}
+
+
+
+/*整個連結區塊排版*/
+li.link{
+    display:inline;
+
+    margin-right:25px;
+}
+
+#link-icon {
+    text-align: center; /* 內容水平置中（針對文字或 inline 元素） */
+}
+
+/*滑鼠放大*/
+.link a:hover img {
+    transform: scale(1.1); /* 放大圖標 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+}
+
+/* 圖片樣式 */
+.link img {
+    width: 50px; /* 圖標寬度 */
+    height: 50px; /* 圖標高度 */
+    border-radius: 50%; /* 圓形圖標 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動畫效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+}
+
+
+/*圖片區1排版*/
+li.picture{
+    display:inline;
+
+    margin-right:15px; /*右側間距*/
+}
+
+.picture {
+    text-align: center; /*置中*/
+}
+
+.picture ul {
+    display: flex;
+    justify-content: center;   /*flex區塊置中*/
+    padding-left: 0;  /*左側間距*/
+}
+
+.picture ul li {
+    margin-right: 3%;   /*li右側間距*/
+}
+
+@media (max-width: 618px) {
+    li.picture img {
+        max-width: 100%;
+        height: 100%;
+        /* height: 105px; */
+    }
+}
+
+/* 圖片樣式 */
+li.picture img {
+    width: 330px; /* 圖標寬度 */
+    height: 200px; /* 圖標高度 */
+    object-fit: cover;
+    border-radius: 10%; /* 圓形圖標 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+}
+
+
+
+
+
+ /*圖片區2排版*/
+li.picture2{
+    display:inline;
+
+    margin-right:15px; /*右側間距*/
+}
+
+.picture2 {
+    text-align: center; /*置中*/
+}
+
+.picture2 ul {
+    display: flex;
+    justify-content: center;   /*flex區塊置中*/
+    padding-left: 0;  /*左側間距*/
+}
+
+.picture2 ul li {
+    margin-right: 3%;   /*li右側間距*/
+}
+
+@media (max-width: 618px) {
+    li.picture2 img {
+        max-width: 100%;
+        height: 100%;
+        /* height: 105px; */
+    }
+}
+
+
+/* 圖片樣式 */
+li.picture2 img {
+    width: 330px; /* 圖標寬度 */
+    height: 200px; /* 圖標高度 */
+    object-fit: cover;
+    border-radius: 10%; /* 圓形圖標 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */    
+}
+
+/* 櫻花 */
+.fullscreen-gif {
+    position: fixed; /* 固定在屏幕上 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* 确保在最上方 */
+    pointer-events: none; /* 禁止鼠标事件 */
+    object-fit: cover; /* 确保 GIF 覆盖整个屏幕 */
+    mix-blend-mode: screen;
+}
