@@ -281,3 +281,95 @@ li.picture3 img {
     font-weight: 700; /* 設定字體為粗體 */
     font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 隐藏实际的 checkbox */
+#popup-toggle {
+    display: none;
+}
+
+/* 弹窗背景遮罩 */
+#popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    z-index: 999;
+}
+
+/* 当 checkbox 被选中时显示遮罩 */
+#popup-toggle:checked + #popup-overlay {
+    display: block;
+}
+
+/* 弹窗内容 */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/*字體*/
+#popup h2{
+    margin: auto; /*置中*/
+    text-align: center; /* 水平置中 */
+    margin-bottom: 20px;
+    color:rgb(255, 0, 0);
+    font-size:5ch;
+    
+    font-weight: bold; /* 設定字體為粗體 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+}
+
+#popup p{
+    margin: auto; /*置中*/
+    text-align: center; /* 水平置中 */
+    margin-bottom: 20px;
+    color:rgb(26, 127, 141);
+    font-size:3ch;
+    font-weight: bold; /* 設定字體為粗體 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 設定字體為微軟正黑體 */
+}
+
+
+/* 关闭按钮 */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+
+
