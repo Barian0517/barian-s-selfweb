@@ -1,6 +1,6 @@
 body {
             
-    background-image: url('462579371_927313026166839_2595135407964853824_n.png'); /*背景圖片*/
+    background-image: url('ce90c23d6b2a1e71aba885f93c0ea65d_preview.gif'); /*背景圖片*/
     /* overflow: auto  啟用滾動 */
     background-size: cover; /*背景圖片大小*/
     background-position: center;  /*中心*/          
@@ -369,6 +369,72 @@ li.picture3 img {
 
 .close-btn:hover {
     color: red;
+}
+
+
+
+
+
+
+
+
+
+/* 固定播放器到底部 */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+}
+
+/* 播放/暫停按鈕 */
+.play-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* 進度條 */
+.progress {
+    flex: 1;
+    height: 5px;
+    background: gray;
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #ff5722;
+    width: 0%;
+}
+
+/* 時間顯示 */
+.time {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* 音量控制 */
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+.volume-control input {
+    width: 70px;
+    cursor: pointer;
 }
 
 

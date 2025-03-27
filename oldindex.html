@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- 全屏特效 -->
-    <img src="fullgif.gif" alt="櫻花 GIF" class="fullscreen-gif">
+    <img src="fullgif.gif" alt="櫻花 GIF" class="fullscreen-gif">   
 
 
 
@@ -34,7 +34,7 @@
         <h2>༺❀幽༒幽❀༻</h2>
         <p>
             "與其追風去,不如等風來"
-
+            
         </p>
     </div>
 
@@ -64,7 +64,7 @@
                 </a>
             </li>
         </ul>
-
+        
     </div>
 
 
@@ -88,7 +88,7 @@
             忘記回<br>
             已讀忘了<br>
             還有可能一些說話習慣之類的</p>
-
+    
     </div>
 
 
@@ -110,7 +110,7 @@
 
 
         </ul>
-
+        
     </div>
 
 
@@ -121,7 +121,7 @@
         <p>社交媒體<br>messenger > FB > DC > IG > TG</p>
         <p>-時段-<br>週一到週五 早上8.~ 凌晨2.<br>假日 早上12.~ 凌晨2.、3.
         <p>通常我在線都會回 沒回的話可以多傳幾遍 可能是忘了</p>
-
+        
     </div>
 
 
@@ -189,7 +189,7 @@
 
 
 
-    <div id="動漫區" class="block">
+    <div id="動漫區" class="block">        
         <h2>動漫坑、推角</h2>
         <p>-深坑-<br>
             從零開始的異世界生活 123季  推> 愛蜜莉雅<br>
@@ -213,8 +213,8 @@
             未來日記<br>
             終結的熾天使<br>
             DARLING in the FRANXX
-        </p>
-
+        </p>        
+        
 
 
     </div>
@@ -231,79 +231,32 @@
     </div>
 
     <!-- 播放/暫停控制 -->
-    <<!-- 音樂播放器 -->
-    <div class="music-player">
-        <button class="play-btn" id="playPauseBtn">▶️</button>
-        <span id="songName">壞女孩 - 徐良/小凌</span>
-        <span class="time" id="currentTime">00:00</span>
-
-        <!-- 進度條 -->
-        <div class="progress" id="progressBar">
-            <div class="progress-bar" id="progress"></div>
-        </div>
-
-        <span class="time" id="totalTime">00:00</span>
-
-        <!-- 音量控制 -->
-        <div class="volume-control">
-            🔊 <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
-        </div>
-    </div>
-
-    <audio id="audio" src="music.mp3"></audio>
-
     <script>
-        const audio = document.getElementById('audio');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const progressBar = document.getElementById('progressBar');
-        const progress = document.getElementById('progress');
-        const currentTimeDisplay = document.getElementById('currentTime');
-        const totalTimeDisplay = document.getElementById('totalTime');
-        const volumeSlider = document.getElementById('volumeSlider');
+        const audio = document.getElementById('musicauto');
+        const button = document.getElementById('musicControl');
 
-        // 播放/暫停功能
-        playPauseBtn.addEventListener('click', function() {
+        // 點擊按鈕控制音樂播放/暫停
+        button.addEventListener('click', function() {
             if (audio.paused) {
-                audio.play();
-                playPauseBtn.textContent = "⏸️"; // 暫停符號
+                audio.muted = false; // 解除靜音
+                audio.play().catch(error => console.log("播放失敗:", error));
+                button.textContent = "暫停";
             } else {
                 audio.pause();
-                playPauseBtn.textContent = "▶️"; // 播放符號
+                button.textContent = "播放";
             }
         });
 
-        // 更新進度條與時間
-        audio.addEventListener('timeupdate', function() {
-            const progressPercent = (audio.currentTime / audio.duration) * 100;
-            progress.style.width = progressPercent + "%";
-            currentTimeDisplay.textContent = formatTime(audio.currentTime);
-        });
-
-        // 更新總時間
-        audio.addEventListener('loadedmetadata', function() {
-            totalTimeDisplay.textContent = formatTime(audio.duration);
-        });
-
-        // 進度條拖動功能
-        progressBar.addEventListener('click', function(e) {
-            const clickX = e.offsetX;
-            const width = progressBar.clientWidth;
-            const newTime = (clickX / width) * audio.duration;
-            audio.currentTime = newTime;
-        });
-
-        // 音量調整
-        volumeSlider.addEventListener('input', function() {
-            audio.volume = volumeSlider.value;
-        });
-
-        // 格式化時間（秒 → mm:ss）
-        function formatTime(seconds) {
-            const min = Math.floor(seconds / 60);
-            const sec = Math.floor(seconds % 60);
-            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
-        }
+        // 點擊任意位置解除靜音並播放（解決瀏覽器限制）
+        document.body.addEventListener('click', function() {
+            if (audio.muted) {
+                audio.muted = false;
+                audio.play().catch(error => console.log("播放失敗:", error));
+                button.textContent = "暫停";
+            }
+        }, { once: true }); // 只執行一次
     </script>
+
 
 
 
@@ -322,7 +275,7 @@
         </div>
     </div>
 
-
+    
 
 
 
